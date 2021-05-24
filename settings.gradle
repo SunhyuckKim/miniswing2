@@ -1,0 +1,4 @@
+rootProject.name = 'miniswing2'
+include ':product-service', ':customer-service', ':service_service'
+include 'common-service'
+

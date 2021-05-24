@@ -1,0 +1,27 @@
+server.port: 7000
+
+app:
+   product-service:
+     host: localhost
+     port: 7001
+   service-service:
+     host: localhost
+     port: 7002
+   customer-service:
+     host: localhost
+     port: 7003
+
+spring:
+  jpa:
+    ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        # Strongly recommend to set this property to "none" in a production environment!
+  h2:
+    console:
+      enabled: true
+
+
+

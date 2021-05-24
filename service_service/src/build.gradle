@@ -1,0 +1,17 @@
+jar {
+    enabled = true
+}
+bootJar {
+    enabled = false
+}
+dependencies {
+    compile project (':product-service')
+    compile project (':customer-service')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+
+    // lombok
+    compileOnly("org.projectlombok:lombok")
+    testCompileOnly 'org.projectlombok:lombok'
+    annotationProcessor("org.projectlombok:lombok")
+}
