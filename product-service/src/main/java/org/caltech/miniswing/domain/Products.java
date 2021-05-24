@@ -5,9 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
@@ -15,16 +13,21 @@ import javax.persistence.Id;
 public class Products {
 
     @Id
-    @Column(length = 10, nullable = false)
-    private String prodId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "prod_id", length = 10, nullable = false)
+    private Long id;
 
     @Column(length = 100, nullable = false)
     private String prodNm;
 
 
     @Builder
-    public Products(String prodId, String prodNm) {
-        this.prodId = prodId;
+    public Products(Long id, String prodNm) {
+        this.id = id;
         this.prodNm = prodNm;
     }
+    public Long getProdId() {
+        return id;
+    }
+
 }

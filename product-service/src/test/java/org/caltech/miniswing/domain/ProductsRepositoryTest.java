@@ -25,7 +25,7 @@ public class ProductsRepositoryTest {
         String prodNm = "기본요금제";
 
         productsRepository.save(Products.builder()
-                .prodId(prodId)
+                .id(prodId)
                 .prodNm(prodNm)
                 .build());
 

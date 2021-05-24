@@ -28,5 +28,9 @@ public class Services {
         this.svcNum = svcNum;
         this.feeProd = feeProd;
     }
+    public long getSvcMgmtNum() {
+        return id;
+    }
+
 
 }

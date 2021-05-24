@@ -63,10 +63,5 @@ dependencies {
 	compile project (':customer-service')
 	compile project (':service_service')
 	compile project (':common-service')
-}
-
-project(':customer-service') {
-	//dependencies {
-	//	compile project(':common-service')
-	//}
+	compile project (':svcprod-service')
 }

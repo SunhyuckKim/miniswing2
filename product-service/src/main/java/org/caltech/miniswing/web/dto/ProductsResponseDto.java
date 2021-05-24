@@ -6,7 +6,7 @@ import org.caltech.miniswing.domain.Products;
 @Getter
 public class ProductsResponseDto {
 
-    private String prodId;
+    private Long prodId;
     private String prodNm;
 
     public ProductsResponseDto(Products entity) {
